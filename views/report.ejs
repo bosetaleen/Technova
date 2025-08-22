@@ -1,0 +1,39 @@
+<% layout('layout') %>
+<div class="card">
+  <h2>Report a Billboard</h2>
+  <form action="/report" method="POST" enctype="multipart/form-data">
+    <label>Citizen Name (optional)
+      <input type="text" name="citizen_name" placeholder="Your name"/>
+    </label>
+    <label>Email (optional for updates)
+      <input type="email" name="email" placeholder="you@example.com"/>
+    </label>
+    <label>Phone (optional)
+      <input type="text" name="phone" placeholder="+91-XXXXXXXXXX"/>
+    </label>
+    <label>Location (describe the spot / landmark)
+      <input type="text" name="location" required placeholder="Near XYZ crossing, opposite ABC store"/>
+    </label>
+    <label>Issue Type
+      <select name="issue_type" required>
+        <option value="size">Size / Dimensions</option>
+        <option value="placement">Poor placement / blocks signal</option>
+        <option value="structural">Structural hazard</option>
+        <option value="content">Obscene / misleading content</option>
+        <option value="other">Other</option>
+      </select>
+    </label>
+    <label>Description
+      <textarea name="description" rows="4" placeholder="Add any supporting details"></textarea>
+    </label>
+    <label>Photo (JPG/PNG, max 5 MB)
+      <input type="file" name="photo" accept="image/*" required />
+    </label>
+    <div style="margin-top:12px;">
+      <button type="submit">Submit Report</button>
+    </div>
+  </form>
+</div>
+<div class="card">
+  <p class="muted">Disclaimer: Uploaded images are used strictly for verification by city authorities. Faces/vehicle numbers, if unintentionally captured, will not be used to identify individuals. Do not upload unsafe content.</p>
+</div>

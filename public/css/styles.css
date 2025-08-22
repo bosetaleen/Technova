@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; background: #0b1220; color: #e6e6e6; }
+header { padding: 16px; background: #0f172a; border-bottom: 1px solid #1f2937; }
+header h1 { margin: 0; font-size: 20px; }
+main { max-width: 960px; margin: 24px auto; padding: 0 16px; }
+a { color: #93c5fd; text-decoration: none; }
+.card { background: #111827; border: 1px solid #1f2937; border-radius: 14px; padding: 16px; margin-bottom: 16px; }
+input, select, textarea { width: 100%; padding: 10px 12px; margin-top: 8px; background: #0b1220; color: #e6e6e6; border: 1px solid #1f2937; border-radius: 10px; }
+label { font-size: 14px; color: #cbd5e1; }
+button { padding: 10px 14px; border-radius: 10px; border: 0; background: #2563eb; color: white; cursor: pointer; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #1f2937; }
+.status { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 12px; }
+.s-NEW { background: #1f2937; }
+.s-UNDER_REVIEW { background: #4b5563; }
+.s-VERIFIED { background: #065f46; }
+.s-ACTION_TAKEN { background: #92400e; }
+.s-CLOSED { background: #0f766e; }
+.muted { color: #9ca3af; }
+footer { text-align: center; color: #9ca3af; padding: 24px 0; }

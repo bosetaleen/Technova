@@ -1,0 +1,27 @@
+<% layout('layout') %>
+<div class="card">
+  <h2>Dashboard</h2>
+  <p><a href="/admin/logout">Logout</a></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Case ID</th>
+        <th>Issue</th>
+        <th>Status</th>
+        <th>Reported</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    <% reports.forEach(r => { %>
+      <tr>
+        <td><%= r.case_id %></td>
+        <td><%= r.issue_type %></td>
+        <td><span class="status s-<%= r.status %>"><%= r.status %></span></td>
+        <td><%= r.created_at %></td>
+        <td><a href="/admin/case/<%= r.id %>">Open</a></td>
+      </tr>
+    <% }) %>
+    </tbody>
+  </table>
+</div>

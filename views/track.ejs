@@ -1,0 +1,12 @@
+<% layout('layout') %>
+<div class="card">
+  <h2>Track a Case</h2>
+  <form action="/track" method="GET">
+    <label>Enter Case ID
+      <input name="caseId" placeholder="e.g., REP20250001" required />
+    </label>
+    <div style="margin-top:12px;">
+      <button type="submit">Check Status</button>
+    </div>
+  </form>
+</div>

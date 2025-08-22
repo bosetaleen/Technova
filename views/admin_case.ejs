@@ -1,0 +1,28 @@
+<% layout('layout') %>
+<div class="card">
+  <h2>Case <%= report.case_id %></h2>
+  <p><span class="muted">Reporter:</span> <%= report.citizen_name || 'Anonymous' %> | <%= report.email || '—' %> | <%= report.phone || '—' %></p>
+  <p><span class="muted">Location:</span> <%= report.location %></p>
+  <p><span class="muted">Issue:</span> <%= report.issue_type %></p>
+  <p><span class="muted">Description:</span> <%= report.description || '—' %></p>
+  <p><span class="muted">Submitted:</span> <%= report.created_at %></p>
+  <% if (report.image_path) { %>
+    <div style="margin-top:8px;">
+      <img src="<%= report.image_path %>" style="max-width:100%; border-radius:12px; border:1px solid #1f2937;" />
+    </div>
+  <% } %>
+  <form method="POST" action="/admin/case/<%= report.id %>/status" style="margin-top:12px;">
+    <label>Update Status
+      <select name="status" required>
+        <option value="NEW" <%= report.status === 'NEW' ? 'selected' : '' %> >NEW</option>
+        <option value="UNDER_REVIEW" <%= report.status === 'UNDER_REVIEW' ? 'selected' : '' %> >UNDER_REVIEW</option>
+        <option value="VERIFIED" <%= report.status === 'VERIFIED' ? 'selected' : '' %> >VERIFIED</option>
+        <option value="ACTION_TAKEN" <%= report.status === 'ACTION_TAKEN' ? 'selected' : '' %> >ACTION_TAKEN</option>
+        <option value="CLOSED" <%= report.status === 'CLOSED' ? 'selected' : '' %> >CLOSED</option>
+      </select>
+    </label>
+    <div style="margin-top:12px;">
+      <button type="submit">Save</button>
+    </div>
+  </form>
+</div>

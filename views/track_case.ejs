@@ -1,0 +1,18 @@
+<% layout('layout') %>
+<div class="card">
+  <h2>Case <%= report.case_id %></h2>
+  <% if (!report) { %>
+    <p>No case found.</p>
+  <% } else { %>
+    <p>Status: <span class="status s-<%= report.status %>"><%= report.status %></span></p>
+    <p><span class="muted">Reported:</span> <%= report.created_at %></p>
+    <p><span class="muted">Issue:</span> <%= report.issue_type %></p>
+    <p><span class="muted">Location:</span> <%= report.location %></p>
+    <p><span class="muted">Description:</span> <%= report.description || '—' %></p>
+    <% if (report.image_path) { %>
+      <div style="margin-top:8px;">
+        <img src="<%= report.image_path %>" alt="evidence" style="max-width:100%; border-radius:12px; border:1px solid #1f2937;"/>
+      </div>
+    <% } %>
+  <% } %>
+</div>

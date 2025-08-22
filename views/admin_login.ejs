@@ -1,0 +1,16 @@
+<% layout('layout') %>
+<div class="card">
+  <h2>Officer Login</h2>
+  <% if (error) { %><p style="color:#fca5a5;"><%= error %></p><% } %>
+  <form method="POST">
+    <label>Username
+      <input name="username" required />
+    </label>
+    <label>Password
+      <input name="password" type="password" required />
+    </label>
+    <div style="margin-top:12px;">
+      <button type="submit">Login</button>
+    </div>
+  </form>
+</div>
