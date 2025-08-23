@@ -1,0 +1,112 @@
+.card {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid #00d4ff;
+    overflow: hidden;
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+    animation: glow 10s infinite;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    color: #e0e0e0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+th {
+    background: linear-gradient(90deg, #00d4ff, #007bff);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+}
+
+tr:hover td {
+    background: rgba(0, 212, 255, 0.15);
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status[data-status="open"] {
+    background: linear-gradient(45deg, #ff4d4d, #ff1a1a);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+    animation: pulse 2s infinite;
+}
+
+.status[data-status="closed"] {
+    background: linear-gradient(45deg, #4dff4d, #1aff1a);
+    color: #1a1a1a;
+    box-shadow: 0 0 10px rgba(77, 255, 77, 0.5);
+}
+
+a {
+    color: #00d4ff;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #00d4ff;
+    transition: width 0.3s ease;
+}
+
+a:hover {
+    color: #00b7e6;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+@keyframes glow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}

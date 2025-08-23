@@ -1,4 +1,13 @@
-<% layout('layout') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+  <link rel="stylesheet" href="/css/admin_case.css">
+</head>
+<body>
+ <% layout('layout') %>
 <div class="card">
   <h2>Case <%= report.case_id %></h2>
   <p><span class="muted">Reporter:</span> <%= report.citizen_name || 'Anonymous' %> | <%= report.email || '—' %> | <%= report.phone || '—' %></p>
@@ -26,3 +35,5 @@
     </div>
   </form>
 </div>
+</body>
+</html>

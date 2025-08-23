@@ -1,0 +1,83 @@
+.card {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 40px;
+  border-radius: 20px;
+  background: radial-gradient(circle, #0a0f2b, #1a1f4b);
+  box-shadow: 0 0 20px rgba(0, 150, 255, 0.3);
+  color: #e0f7fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVQYV2NkYGD4zwABjQAxgjAAGAhjAFQhMHgA0AAAwBvwGxF8zAAAAAElFTkSuQmCC') repeat;
+  opacity: 0.1;
+  animation: stars 10s infinite linear;
+}
+
+h2 {
+  font-size: 32px;
+  text-align: center;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #a3bffa;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 12px 25px;
+  margin: 0 10px 10px 0;
+  border: none;
+  border-radius: 50px;
+  background: #ff007a;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  top: 0;
+  left: 0;
+  transition: width 0.4s ease;
+}
+
+button:hover::after {
+  width: 100%;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff007a;
+}
+
+a[href="/admin/login"] button {
+  background: #6a00ff;
+}
+
+a[href="/admin/login"] button:hover {
+  box-shadow: 0 0 20px #6a00ff;
+}
+
+@keyframes stars {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100px); }
+}

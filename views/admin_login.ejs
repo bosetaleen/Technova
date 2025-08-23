@@ -1,4 +1,13 @@
-<% layout('layout') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="/css/admin_login.css">
+</head>
+<body>
+  <% layout('layout') %>
 <div class="card">
   <h2>Officer Login</h2>
   <% if (error) { %><p style="color:#fca5a5;"><%= error %></p><% } %>
@@ -14,3 +23,6 @@
     </div>
   </form>
 </div>
+
+</body>
+</html>

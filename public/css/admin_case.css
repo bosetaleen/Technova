@@ -1,0 +1,126 @@
+body {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    font-family: 'Segoe UI', 'Nunito', Arial, sans-serif;
+    padding: 40px 0;
+}
+
+.card {
+    background: rgba(255,255,255,0.25);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.18);
+    padding: 32px 30px;
+    max-width: 500px;
+    margin: 40px auto;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.47);
+}
+
+.card h2 {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #fc7a1e;
+    border-bottom: 2px solid #fc7a1e;
+    padding-bottom: 10px;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+.card .muted {
+    color: #8360c3;
+    background: rgba(255,255,255,0.4);
+    border-radius: 8px;
+    padding: 2px 8px;
+    margin-right: 8px;
+    font-size: 0.98em;
+    font-weight: 500;
+}
+
+.card p {
+    margin: 6px 0 10px 0;
+    color: #53346d;
+    font-size: 1.05em;
+}
+
+.card span {
+    font-weight: 600;
+}
+
+.card img {
+    border-radius: 16px;
+    border: 2px solid #fc7a1e;
+    margin: 18px 0 8px 0;
+    box-shadow: 0 4px 12px rgba(252, 122, 30, 0.12);
+    max-width: 100%;
+    background: #fff;
+}
+
+/* Stylish Form */
+.card form {
+    margin-top: 24px;
+    padding: 20px;
+    background: rgba(255,255,255,0.35);
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(98, 0, 238, 0.10);
+    border: 1px solid #fcb69f;
+}
+
+.card label {
+    font-weight: 600;
+    color: #53346d;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 1.08em;
+}
+
+.card select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 2px solid #8360c3;
+    font-size: 1em;
+    background: linear-gradient(90deg, #fcb69f 0%, #ffecd2 100%);
+    color: #53346d;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(98,0,238,0.07);
+    outline: none;
+    transition: border 0.2s;
+}
+
+.card select:focus {
+    border-color: #fc7a1e;
+}
+
+.card button[type="submit"] {
+    background: linear-gradient(90deg, #fc7a1e 0%, #8360c3 100%);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.07em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(252, 122, 30, 0.18);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.card button[type="submit"]:hover {
+    background: linear-gradient(270deg, #8360c3 0%, #fc7a1e 100%);
+    box-shadow: 0 6px 20px rgba(131, 96, 195, 0.30);
+}
+
+@media (max-width: 600px) {
+    .card {
+        padding: 15px 8px;
+    }
+
+    .card h2 {
+        font-size: 1.3em;
+    }
+}
