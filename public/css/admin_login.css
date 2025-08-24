@@ -1,92 +1,76 @@
-
 .card {
-  max-width: 400px;
-  margin: 60px auto;
-  padding: 35px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  color: #e0e0e0;
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 30px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: #111827;
 }
 
+/* Headings */
 h2 {
   text-align: center;
-  font-size: 30px;
-  color: #00ffcc;
-  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
-  margin-bottom: 25px;
-  animation: neonPulse 2s infinite alternate;
+  font-size: 22px;
+  color: #0a3d62; /* govt navy blue */
+  font-weight: 700;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #ff9933; /* saffron accent */
+  padding-bottom: 8px;
+  letter-spacing: 0.5px;
 }
 
+/* Form layout */
 form {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
 }
 
+/* Labels */
 label {
   font-weight: 600;
-  font-size: 15px;
-  color: #a0d2eb;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 14px;
+  color: #374151;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
+/* Inputs */
 input {
-  padding: 14px;
-  border: none;
-  border-radius: 50px;
-  background: rgba(255, 255, 255, 0.05);
-  color: #fff;
-  font-size: 16px;
-  border: 1px solid rgba(160, 210, 235, 0.3);
-  transition: all 0.4s ease;
+  padding: 12px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  background: #f9fafb;
+  color: #111827;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 input:focus {
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 15px #00ffcc;
-  transform: translateY(-2px);
+  background: #ffffff;
+  border-color: #0a3d62;
+  box-shadow: 0 0 4px rgba(10, 61, 98, 0.35);
+  outline: none;
 }
 
+/* Button */
 button {
-  padding: 15px;
-  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  padding: 12px;
+  background: #0a3d62; /* navy blue */
   border: none;
-  border-radius: 50px;
-  color: #fff;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-button::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  top: 0;
-  left: 0;
-  transition: width 0.3s ease;
-}
-
-button:hover::after {
-  width: 100%;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #ff00cc;
-}
-
-@keyframes neonPulse {
-  from { text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc; }
-  to { text-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc; }
+  background: #064273; /* deeper navy */
+  transform: translateY(-1px);
 }

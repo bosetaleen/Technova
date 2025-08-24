@@ -1,112 +1,112 @@
+body {
+    background-color: #f2f4f7; /* light official gray */
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 30px 0;
+    color: #212121;
+}
+
+/* Card */
 .card {
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
-    border-radius: 15px;
-    padding: 25px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    border: 1px solid #00d4ff;
-    overflow: hidden;
-    position: relative;
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    padding: 28px 24px;
+    max-width: 650px;
+    margin: 40px auto;
 }
 
-.card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
-    animation: glow 10s infinite;
+/* Heading */
+.card h2 {
+    font-size: 1.7em;
+    font-weight: 700;
+    color: #0a3d62; /* Govt navy blue */
+    border-bottom: 3px solid #ff9933; /* saffron accent */
+    padding-bottom: 10px;
+    margin-bottom: 22px;
+    text-align: center;
+    letter-spacing: 0.4px;
 }
 
-table {
+/* Labels */
+.card label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+    display: block;
+    font-size: 1em;
+}
+
+/* Inputs & Select */
+.card select, 
+.card input[type="text"] {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 10px;
-    color: #e0e0e0;
-    font-family: 'Orbitron', sans-serif;
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    font-size: 1em;
+    background: #fff;
+    color: #222;
+    margin-bottom: 18px;
+    outline: none;
+    transition: border-color 0.2s;
 }
 
-th, td {
-    padding: 15px 20px;
-    text-align: left;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    backdrop-filter: blur(5px);
-    transition: transform 0.3s ease;
+.card select:focus,
+.card input[type="text"]:focus {
+    border-color: #0a3d62;
 }
 
-th {
-    background: linear-gradient(90deg, #00d4ff, #007bff);
+/* Button */
+.card button[type="submit"] {
+    background-color: #0a3d62;
     color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 1.1em;
-}
-
-tr:hover td {
-    background: rgba(0, 212, 255, 0.15);
-    transform: scale(1.02);
+    border: none;
+    padding: 12px 26px;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: 600;
     cursor: pointer;
+    transition: background 0.25s, box-shadow 0.25s;
+    display: block;
+    margin: 24px auto 0;
 }
 
-.status {
-    display: inline-block;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.9em;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.card button[type="submit"]:hover {
+    background-color: #064273;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.18);
 }
 
-.status[data-status="open"] {
-    background: linear-gradient(45deg, #ff4d4d, #ff1a1a);
-    color: #fff;
-    box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
-    animation: pulse 2s infinite;
+/* Paragraphs */
+.card p {
+    margin: 10px 0 12px 0;
+    color: #444;
+    font-size: 0.96em;
 }
 
-.status[data-status="closed"] {
-    background: linear-gradient(45deg, #4dff4d, #1aff1a);
-    color: #1a1a1a;
-    box-shadow: 0 0 10px rgba(77, 255, 77, 0.5);
+.card span {
+    font-weight: 600;
+    color: #0a3d62;
 }
 
-a {
-    color: #00d4ff;
-    text-decoration: none;
-    position: relative;
-    padding: 5px 10px;
-    transition: color 0.3s ease;
+/* Form container */
+.card form {
+    margin-top: 20px;
+    padding: 18px;
+    background: #fafafa;
+    border-radius: 5px;
+    border: 1px solid #e2e2e2;
 }
 
-a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background: #00d4ff;
-    transition: width 0.3s ease;
-}
+/* Media */
+@media (max-width: 600px) {
+    .card {
+        padding: 18px;
+        margin: 20px;
+    }
 
-a:hover {
-    color: #00b7e6;
-}
-
-a:hover::after {
-    width: 100%;
-}
-
-@keyframes glow {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+    .card h2 {
+        font-size: 1.3em;
+    }
 }

@@ -1,45 +1,73 @@
+/* Card Container */
 .card {
-    background-color: #1e1e1e;
+    background: linear-gradient(135deg, #1e1e1e, #292929);
     border: 2px solid #444;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+    padding: 25px;
     color: #e0e0e0;
+    max-width: 520px;
+    margin: 50px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-h2 {
-    color: #00ffcc;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 196, 255, 0.25);
+}
+
+/* Headings */
+.card h2 {
+    color: #00c4ff;
     text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 0 0 6px rgba(0, 196, 255, 0.6);
 }
 
-label {
+/* Labels */
+.card label {
     color: #b0b0b0;
     font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
 }
 
-input[type="text"] {
+/* Text Input */
+.card input[type="text"] {
     width: 100%;
     padding: 10px;
-    margin: 5px 0;
+    margin-bottom: 15px;
     border: 1px solid #555;
-    border-radius: 5px;
+    border-radius: 6px;
     background-color: #2a2a2a;
     color: #e0e0e0;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-button[type="submit"] {
-    background-color: #007bff;
+.card input[type="text"]:focus {
+    border-color: #00c4ff;
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 196, 255, 0.5);
+}
+
+/* Submit Button */
+.card button[type="submit"] {
+    background: linear-gradient(45deg, #007bff, #00c4ff);
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 22px;
+    border-radius: 6px;
     color: white;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 8px rgba(0, 196, 255, 0.3);
 }
 
-button[type="submit"]:hover {
-    background: linear-gradient(45deg, #007bff, #00c4ff);
-    transform: translateY(-2px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+.card button[type="submit"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(0, 196, 255, 0.5);
 }

@@ -1,37 +1,54 @@
+/* Card Container */
 .card {
     background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    padding: 25px;
     color: #e0e0e0;
+    max-width: 850px;
+    margin: 40px auto;
+    border: 1px solid rgba(0, 196, 255, 0.2);
 }
 
-h2 {
+/* Headings */
+.card h1, .card h2, .card h3 {
     color: #00c4ff;
     text-align: center;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-shadow: 0 0 6px rgba(0, 196, 255, 0.6);
 }
 
+/* Strong Text with Pulse Effect */
 strong {
     color: #ff6b6b;
     animation: pulse 2s infinite;
+    font-weight: bold;
+    text-shadow: 0 0 6px rgba(255, 107, 107, 0.7);
 }
 
-p {
+/* Paragraphs */
+.card p {
     color: #b0b0b0;
-    margin: 10px 0;
+    margin: 12px 0;
+    line-height: 1.6;
 }
 
+/* Links */
 a {
     color: #007bff;
     text-decoration: none;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
 }
-
 a:hover {
+    color: #00c4ff;
     text-decoration: underline;
+    text-shadow: 0 0 8px rgba(0, 196, 255, 0.6);
 }
 
+/* Pulse Animation */
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.07); }
     100% { transform: scale(1); }
 }
